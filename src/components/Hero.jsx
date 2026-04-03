@@ -120,7 +120,7 @@ export default function Hero() {
     <section 
       id="hero" 
       ref={containerRef}
-      className="relative min-h-screen flex flex-col items-center justify-between bg-primary-dark overflow-hidden snap-start pt-20 pb-10 md:pt-32 md:pb-16 perspective-1000"
+      className="relative min-h-screen flex flex-col items-center justify-start bg-primary-dark overflow-hidden snap-start pt-28 pb-10 md:pt-40 md:pb-16 perspective-1000"
     >
       {/* --- Tech Background Layer --- */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">

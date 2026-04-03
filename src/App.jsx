@@ -20,6 +20,11 @@ function App() {
   const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
+    // Prevent browser from restoring scroll position automatically during refresh
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+
     // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
       duration: 1.2,
