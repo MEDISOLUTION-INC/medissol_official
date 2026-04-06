@@ -54,8 +54,8 @@ export default function Solutions() {
     },
     {
       title: '속닥속닥 플랫폼',
-      subtitle: '의료 앱 인기 8위의 EMR 연동 예약 서비스',
-      features: ['병원예약', '비대면 진료', '약국 찾기'],
+      subtitle: '전국 아동병원이 선택한 EMR 연동 실시간 예약 서비스',
+      features: ['병원예약', '비대면 진료'],
       logos: [{ name: '속닥속닥', logo: socdoc }],
       type: 'featured'
     }
@@ -71,7 +71,7 @@ export default function Solutions() {
         const totalWidth = marquee.scrollWidth / 2;
         const containerWidth = marquee.parentElement.offsetWidth;
         const centerX = containerWidth / 2;
-        
+
         // Prepare logo data with currentScale for Lerping
         const data = Array.from(logos).map(logo => ({
           el: logo,
@@ -87,16 +87,16 @@ export default function Solutions() {
           duration: 60,
           ease: 'none',
           repeat: -1,
-          onUpdate: function() {
+          onUpdate: function () {
             const marqueeX = gsap.getProperty(marquee, 'x');
-            
+
             data.forEach(item => {
               let currentCenter = item.baseX + marqueeX;
-              
+
               // Handle infinite loop logic for world position
               if (currentCenter < -totalWidth / 4) currentCenter += totalWidth;
               if (currentCenter > totalWidth * 1.25) currentCenter -= totalWidth;
-              
+
               const dist = Math.abs(centerX - currentCenter);
               const maxDist = containerWidth * 0.7;
 
@@ -107,7 +107,7 @@ export default function Solutions() {
                 const eased = Math.pow(Math.sin(norm * Math.PI / 2), 2);
                 targetScale = 1 + (0.5 * eased);
               }
-              
+
               // Apply Lerp for 'buttery smooth' transition (0.1 = 10% towards target per frame)
               item.currentScale += (targetScale - item.currentScale) * 0.15;
               item.setter(item.currentScale);
@@ -137,16 +137,16 @@ export default function Solutions() {
 
           if (dist < 300) {
             gsap.to('.sol-featured-logo', {
-              x: dx / 12,
-              y: dy / 12,
-              duration: 0.6,
+              x: dx / 15, // Slightly heavier feel
+              y: dy / 15,
+              duration: 1.5, // Much slower response
               ease: 'power2.out'
             });
           } else {
             gsap.to('.sol-featured-logo', {
               x: 0,
               y: 0,
-              duration: 1,
+              duration: 1.8, // Slower return
               ease: 'power2.out'
             });
           }
@@ -208,16 +208,16 @@ export default function Solutions() {
                     <div className="flex whitespace-nowrap sol-marquee-content gap-12 md:gap-20 items-center">
                       {/* Double the logos for marquee */}
                       {[...section.logos, ...section.logos].map((item, i) => (
-                        <div 
-                          key={i} 
+                        <div
+                          key={i}
                           className="sol-logo-item-wrapper flex-shrink-0 flex flex-col items-center justify-center gap-4 transition-all duration-300"
                         >
                           <div className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] flex items-center justify-center">
                             {item.logo ? (
-                              <img 
-                                src={item.logo} 
-                                alt={item.name} 
-                                className="w-full h-full object-contain" 
+                              <img
+                                src={item.logo}
+                                alt={item.name}
+                                className="w-full h-full object-contain"
                               />
                             ) : (
                               <div className="w-[70%] h-[70%] bg-white/5 border border-white/10 rounded-[22.5%] flex items-center justify-center text-white/20 text-xs md:text-sm font-bold text-center px-2">
@@ -236,11 +236,11 @@ export default function Solutions() {
                   <div className="w-full flex items-center justify-center sol-featured-logo-container py-12">
                     <div className="sol-featured-logo relative group/soc flex flex-col items-center gap-8">
                       <div className="absolute inset-[-40px] bg-accent/5 rounded-full blur-[60px] animate-pulse opacity-20"></div>
-                      <div className="relative z-10 w-[160px] h-[160px] md:w-[240px] md:h-[240px] flex items-center justify-center transition-transform duration-700 group-hover/soc:scale-105">
-                        <img 
-                          src={section.logos[0].logo} 
-                          alt={section.logos[0].name} 
-                          className="w-full h-full object-contain" 
+                      <div className="relative z-10 w-[160px] h-[160px] md:w-[240px] md:h-[240px] flex items-center justify-center">
+                        <img
+                          src={section.logos[0].logo}
+                          alt={section.logos[0].name}
+                          className="w-full h-full object-contain"
                         />
                       </div>
                       <p className="text-xl md:text-2xl font-bold text-white/60 tracking-wider">
