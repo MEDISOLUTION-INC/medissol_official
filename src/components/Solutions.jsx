@@ -22,6 +22,8 @@ import choesang from '../assets/hospital_logo/최상산부인과의원.png';
 
 // SocDoc Logo
 import socdoc from '../assets/socdoc_logo/속닥.png';
+import googlePlayBtn from '../assets/app_download_btn/google_play_store.png';
+import appleStoreBtn from '../assets/app_download_btn/apple_store.png';
 
 export default function Solutions() {
   const containerRef = useRef(null);
@@ -30,7 +32,7 @@ export default function Solutions() {
     {
       title: '난임 병원 앱',
       subtitle: '소중한 여정의 모든 순간을, 앱 하나로',
-      features: ['시술 현황', '투약 스케줄', '배아앨범', '동결배아 만료 푸시알림', '동의서 전자서명', '증빙서류 발급'],
+      features: ['시험관아기 시술현황', '문진표', '투약 스케줄', '배아앨범', '동결배아 만료 푸시알림', '동의서 전자서명', '증빙서류 발급'],
       logos: [
         { name: '감자와눈사람여성의원', logo: gamjanun },
         { name: '서울라헬여성의원', logo: rahel },
@@ -58,7 +60,11 @@ export default function Solutions() {
       subtitle: '전국 아동병원이 선택한 EMR 연동 실시간 예약 서비스',
       features: ['병원예약', '비대면 진료'],
       logos: [{ name: '속닥속닥', logo: socdoc }],
-      type: 'featured'
+      type: 'featured',
+      appLinks: {
+        google: 'https://play.google.com/store/apps/details?id=com.sokdoc.medisol',
+        apple: 'https://apps.apple.com/kr/app/%EC%86%8D%EB%8B%A5%EC%86%8D%EB%8B%A5-%EC%89%BD%EA%B3%A0%EB%B9%A0%EB%A5%B8-%EB%B3%91%EC%9B%90%EC%98%88%EC%95%BD-%EB%B9%84%EB%8C%80%EB%A9%B4%EC%A7%84%EB%A3%8C-%EC%95%B1/id6464456242'
+      }
     }
   ];
 
@@ -234,7 +240,7 @@ export default function Solutions() {
                     </div>
                   </div>
                 ) : (
-                  <div className="w-full flex items-center justify-center sol-featured-logo-container py-12">
+                  <div className="w-full flex flex-col items-center justify-center sol-featured-logo-container py-12">
                     <div className="sol-featured-logo relative group/soc flex flex-col items-center gap-8">
                       <div className="absolute inset-[-40px] bg-accent/5 rounded-full blur-[60px] animate-pulse opacity-20"></div>
                       <div className="relative z-10 w-[160px] h-[160px] md:w-[240px] md:h-[240px] flex items-center justify-center">
@@ -248,6 +254,36 @@ export default function Solutions() {
                         {section.logos[0].name}
                       </p>
                     </div>
+
+                    {/* App Download Links */}
+                    {section.appLinks && (
+                      <div className="mt-12 flex flex-col sm:flex-row gap-6 items-center justify-center z-20">
+                        <a
+                          href={section.appLinks.google}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:scale-105 transition-all duration-300 active:scale-95 drop-shadow-lg hover:drop-shadow-accent/20"
+                        >
+                          <img
+                            src={googlePlayBtn}
+                            alt="Get it on Google Play"
+                            className="h-[48px] md:h-[56px] w-auto object-contain"
+                          />
+                        </a>
+                        <a
+                          href={section.appLinks.apple}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:scale-105 transition-all duration-300 active:scale-95 drop-shadow-lg hover:drop-shadow-accent/20"
+                        >
+                          <img
+                            src={appleStoreBtn}
+                            alt="Download on the App Store"
+                            className="h-[48px] md:h-[56px] w-auto object-contain"
+                          />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

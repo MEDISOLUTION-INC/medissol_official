@@ -5,9 +5,10 @@ import gsap from 'gsap';
 const hospitals = [
   '시엘병원', '리오라여성의원', '미래와희망산부인과', '서울라헬여성의원',
   '서울미즈병원', '서울비커밍여성의원', '베스트오브미여성의원', '서울퍼틸리티여성의원',
-  '연세아이봄여성의원', '아이새움소아과', '행복한어린이병원', '인천연세소아청소년과',
-  '삼성웰니스의원', '대전 서울아산이비인후과', '광명 서울아산이비인후과', '보아스이비인후과',
-  '벗이비인후과', 'CM병원', 'CM병원글로벌', 'EM365'
+  '연세아이봄여성의원', '아이새움소아과', '삼성웰니스의원', '대전 서울아산이비인후과',
+  '광명 서울아산이비인후과', '보아스이비인후과', '세화병원', '엘르메디여성의원',
+  '사랑아이여성의원', '아이오라여성의원', '미래연여성의원', '감자와 눈사람 여성의원',
+  '최상산부인과의원', '서연아이여성의원', '소노아여성의원'
 ];
 
 export default function Hero() {
@@ -117,15 +118,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       ref={containerRef}
       className="relative min-h-screen flex flex-col items-center justify-between bg-primary-dark overflow-hidden snap-start pt-20 pb-10 md:pt-24 md:pb-16 perspective-1000"
     >
       {/* --- Tech Background Layer --- */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {/* Animated Tech Grid */}
-        <div 
+        <div
           ref={gridRef}
           className="tech-grid-svg absolute inset-x-[-10%] inset-y-[-10%] opacity-20"
           style={{
@@ -137,7 +138,7 @@ export default function Hero() {
         ></div>
 
         {/* Cursor Spotlight Glow */}
-        <div 
+        <div
           ref={spotlightRef}
           className="absolute w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none mix-blend-screen"
           style={{ left: '-100%', top: '-100%' }}
