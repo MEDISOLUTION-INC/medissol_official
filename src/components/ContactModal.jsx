@@ -47,16 +47,16 @@ export default function ContactModal({ isOpen, onClose }) {
       color: 'bg-white/5',
       textColor: 'text-white'
     },
-    {
-      id: 'phone',
-      type: 'copy',
-      name: '전화 상담',
-      description: '1899-3342 (실시간 상담)',
-      icon: Phone,
-      value: '1899-3342',
-      color: 'bg-white/5',
-      textColor: 'text-white'
-    }
+    // {
+    //   id: 'phone',
+    //   type: 'copy',
+    //   name: '전화 상담',
+    //   description: '1899-3342 (실시간 상담)',
+    //   icon: Phone,
+    //   value: '1899-3342',
+    //   color: 'bg-white/5',
+    //   textColor: 'text-white'
+    // }
   ];
 
   if (!isOpen) return null;
