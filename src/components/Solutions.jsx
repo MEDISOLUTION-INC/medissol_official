@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-// auto-deploy test
+// verified auto-deploy
 import gsap from 'gsap';
 
 // Hospital Logos
