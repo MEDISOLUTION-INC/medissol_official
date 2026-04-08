@@ -45,7 +45,7 @@ const Footer = () => {
 
     return (
         <footer className="border-t border-white/5 bg-primary-dark pt-16 pb-8 px-6 md:px-12 relative overflow-hidden">
-            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 relative z-10">
                 {/* Brand */}
                 <div className="space-y-6">
                     <div className="flex items-center gap-2 mb-2">
@@ -81,6 +81,24 @@ const Footer = () => {
                         <p>medilove1004@medissollab.com</p>
                         <p>사업자 번호 : 797-88-01455</p>
                     </address>
+                </div>
+
+                {/* Social/Resources */}
+                <div>
+                    <h4 className="font-bold text-white mb-6 font-outfit uppercase tracking-widest text-sm text-accent">Connect</h4>
+                    <ul className="space-y-4 text-sm text-text-secondary font-light">
+                        <li>
+                            <a 
+                                href="https://blog.naver.com/medisolution1004" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="hover:text-accent transition-colors flex items-center gap-2 group"
+                            >
+                                <span className="w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                                <span className="group-hover:translate-x-1 transition-transform">공식 블로그</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
                 {/* Fun Terminal */}

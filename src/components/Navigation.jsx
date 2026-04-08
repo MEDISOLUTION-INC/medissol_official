@@ -16,8 +16,8 @@ export default function Navigation({ onOpenModal }) {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out border-b ${scrolled
-          ? 'bg-primary-dark/85 backdrop-blur-md border-white/10 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.4)]'
-          : 'bg-transparent backdrop-blur-none border-transparent py-6'
+        ? 'bg-primary-dark/85 backdrop-blur-md border-white/10 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.4)]'
+        : 'bg-transparent backdrop-blur-none border-transparent py-6'
         }`}
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center relative w-full">
@@ -46,14 +46,6 @@ export default function Navigation({ onOpenModal }) {
 
         {/* Action Buttons */}
         <div className="hidden md:flex items-center gap-3 relative z-50">
-          <a
-            href="https://blog.naver.com/medisolution1004"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2 rounded-full border border-white/15 bg-white/5 text-xs font-bold text-white/70 hover:bg-white/10 hover:border-white/30 hover:text-white transition-all duration-300 backdrop-blur-sm"
-          >
-            블로그
-          </a>
           <a
             href="https://api.mediloving.co.kr/rb/index.php"
             target="_blank"
@@ -101,15 +93,6 @@ export default function Navigation({ onOpenModal }) {
 
           {/* Mobile CTA */}
           <div className="mt-12 w-[280px] flex flex-col gap-3">
-            <a
-              href="https://blog.naver.com/medisolution1004"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-4 rounded-full border border-white/15 bg-white/5 text-center font-bold text-white/80 hover:bg-white/10 transition-all duration-300"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              공식 블로그
-            </a>
             <a
               href="https://api.mediloving.co.kr/rb/index.php"
               target="_blank"

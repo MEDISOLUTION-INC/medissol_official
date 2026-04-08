@@ -34,8 +34,8 @@ export default function About() {
 
   const numData = [
     { target: 21, suffix: ' ', label: '메이저 난임 병원 앱 운영' },
-    { target: 57, suffix: '+', label: '총 제휴 병원' },
-    { target: 34, suffix: '만', label: '앱 회원 수' },
+    { target: 103, suffix: '+', label: '총 제휴 병원' },
+    { target: 40, suffix: '만', label: '앱 회원 수' },
     { target: 140, suffix: '만+', label: '누적 진료 예약' },
     { target: 8, suffix: '위', label: '앱스토어 의료 인기차트' },
   ];
