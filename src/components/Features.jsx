@@ -147,7 +147,7 @@ export default function Features() {
                     </div>
                     
                     <div className="space-y-3">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-accent transition-colors duration-300 break-keep tracking-tighter">
                         {feat.title}
                       </h3>
                       <p className="text-base text-text-secondary font-light leading-relaxed max-w-sm">
@@ -177,7 +177,7 @@ export default function Features() {
                     <div className="p-2.5 bg-white/5 rounded-xl group-hover:bg-white/10 transition-colors duration-300">
                       <feat.Icon className="text-white/40 group-hover:text-accent transition-colors duration-300" size={24} />
                     </div>
-                    <h3 className="text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300 leading-tight">
+                    <h3 className="text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300 leading-tight break-keep tracking-tighter">
                       {feat.title}
                     </h3>
                   </div>

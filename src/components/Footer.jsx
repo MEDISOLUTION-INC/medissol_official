@@ -77,7 +77,7 @@ const Footer = () => {
                 <div>
                     <h4 className="font-bold text-white mb-6 font-outfit uppercase tracking-widest text-sm text-accent">Contact</h4>
                     <address className="not-italic text-sm text-text-secondary space-y-4 font-light leading-relaxed">
-                        <p>서울특별시 송파구 법원로 128,<br />SKV1 메트로시티타워 1010호</p>
+                        <p>서울특별시 송파구 법원로11길 7,<br />현대지식산업센터 C동 909호</p>
                         <p>medilove1004@medissollab.com</p>
                         <p>사업자 번호 : 797-88-01455</p>
                     </address>
